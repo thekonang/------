@@ -1,0 +1,282 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: url('banner.jpg') center/cover no-repeat;
+  color: white;
+}
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #FFF099;
+  overflow-x: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 55%;
+  background-color: #000;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: 36%;               /* κάθετη μέση */
+  left: 30%;              /* οριζόντια μέση */
+  transform: translate(-50%, -50%); /* κεντράρει πλήρως */
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 280px;  /* ή ό,τι μέγεθος θες */
+  width: auto;
+}
+
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  margin-bottom: 4px;
+  
+}
+
+.hero-content h1 {
+	 font-size: 5vw; 
+  margin: 0;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  font-weight: 500;
+    color: #FFF099;
+
+}
+
+.hero-content p {
+font-size: 2vw;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.0);
+  margin-top: -5px;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: #FFF099;
+}
+.hero-content p1 {
+    font-size: 1.5vw;
+  margin-top:0;
+  line-height:1.2;
+  font-weight: 300;
+  color: #FFF099;
+}
+
+/* Κεντραρισμένο λεπτό μενού */
+.main-nav {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+  padding: 0;
+  margin: 0;
+  color:#FFF099;
+  
+}
+
+.nav-menu li a {
+  color: #FFF099;
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffcc00;
+}
+/*βιβλιο κατηγορια */
+.books-grid {
+  display: flex;
+  justify-content: space-between; /* διάστημα ανάμεσα */
+  flex-wrap: nowrap;              /* ΜΗΝ τυλίγεις σε νέα σειρά */
+  gap: 50px;
+}
+
+.book {
+  flex: 50% 30% 50%;   /* περίπου 1/3 πλάτος για 3 βιβλία */
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.buy-button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #e6b800;
+}
+.buy-button {
+  font-size: 1.8rem;     /* Μεγαλύτερα γράμματα */
+  padding: 12px 25px;    /* Μεγαλύτερο κουμπί */
+}
+.book {
+  flex: 0 0 30%;
+  display: flex;               /* κάνε το βιβλίο flex container */
+  flex-direction: column;      /* κάθετα */
+  justify-content: space-between; /* σπρώχνει περιεχόμενο & κουμπί */
+  text-align: center;
+}
+
+.book .buy-button {
+  margin-top: auto;   /* εξασφαλίζει ότι μένει κολλημένο χαμηλά */
+}
+
+/*βιβλιο κατηγορια */
+
+.section {
+  scroll-margin-top: 100px; /* Ή όσο είναι το ύψος του header/menu */
+  max-width: 800px;           /* Περιορίζει το πλάτος για καλύτερη ανάγνωση */
+  margin: 0 auto;             /* Κεντράρει οριζόντια */
+  text-align: center;         /* Κεντράρει το κείμενο */
+  padding: 10px 20px;         /* Προσθέτει περιθώριο γύρω */
+   scroll-margin-top: 120px;  /* <-- αυτό λύνει το πρόβλημα */
+    padding-top: 120px;
+	 margin-top: 20px;
+}
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 70%;      /* Κάνει τη φωτογραφία κυκλική */
+  object-position: 40% 30%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 21px rgba(0, 0, 0, 0.2);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* μπανερ */
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 1300px;     /* Μπορείς να το αλλάξεις */
+  height: auto;      /* Ύψος banner */
+  aspect-ratio: 16/9;
+  margin: 20px auto;      /* Κέντρο & απόσταση από μενού */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  width: 100%;            /* 100% x αριθμός φωτογραφιών */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+#books {
+  margin-top: 60px;  /* φέρνει πιο κοντά το "Βιβλία" */
+}
+#contact {
+margin-top: -30px;
+font-size: 1.3rem;}
+#about p {
+  font-size: 1.8rem; /* Μπορείς να το κάνεις 1.8rem ή 2rem αν θες ακόμα μεγαλύτερο */
+  line-height: 1.3;  /* Αυξάνει το ύψος γραμμής για καλύτερη ανάγνωση */
+  font-weight: 500;  /* Ελαφρώς πιο έντονο από default */
+  color: #333;       /* Ή άστο όπως είναι αν το χρώμα σου αρέσει */
+}
+#about h2 {
+  font-size: 1.8rem; /* Μπορείς να το κάνεις 1.8rem ή 2rem αν θες ακόμα μεγαλύτερο */
+  line-height: 2;  /* Αυξάνει το ύψος γραμμής για καλύτερη ανάγνωση */
+  font-weight: 700;  /* Ελαφρώς πιο έντονο από default */
+  color: #111;          /* πιο έντονο χρώμα (ή διάλεξε ένα που σου ταιριάζει) */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* ελαφριά σκιά για βάθος */
+}
+#books h2 {
+  font-size: 1.8rem; /* Μπορείς να το κάνεις 1.8rem ή 2rem αν θες ακόμα μεγαλύτερο */
+  line-height: 2;  /* Αυξάνει το ύψος γραμμής για καλύτερη ανάγνωση */
+  font-weight: 700;  /* Ελαφρώς πιο έντονο από default */
+  color: #111;          /* πιο έντονο χρώμα (ή διάλεξε ένα που σου ταιριάζει) */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* ελαφριά σκιά για βάθος */
+}
+#books p {
+  font-size: 1.4rem; /* Μπορείς να το κάνεις 1.8rem ή 2rem αν θες ακόμα μεγαλύτερο */
+  line-height: 1.3;  /* Αυξάνει το ύψος γραμμής για καλύτερη ανάγνωση */
+  font-weight: 500;  /* Ελαφρώς πιο έντονο από default */
+  color: #333;       /* Ή άστο όπως είναι αν το χρώμα σου αρέσει */
+}
+/* τελος μπανερ */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.social-links img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+footer {
+  text-align: center;   /* Κεντράρει το κείμενο οριζόντια */
+  padding: 30px 0;      /* Λίγο κενό πάνω-κάτω */
+  background: #000;     /* Αν θες χρώμα φόντου */
+  color: #FFF099;       /* Χρώμα κειμένου */
+  font-size: 1.2rem;      /* Μέγεθος γραμματοσειράς */
+}
